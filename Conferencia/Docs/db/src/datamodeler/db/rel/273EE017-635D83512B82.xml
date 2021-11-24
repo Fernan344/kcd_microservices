@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<relationalModel class="oracle.dbtools.crest.model.design.relational.RelationalDesign" name="Relational_1" id="273EE017-5F51-E510-13BD-635D83512B82" mainViewID="54CF9A42-BE0E-DC19-4B4C-E44B3C0BF974">
+<createdBy>teval</createdBy>
+<createdTime>2021-11-17 17:00:20 UTC</createdTime>
+<ownerDesignName>db</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+<selectedRDBMSSite>32076570-2523-435C-2E92-BF29817DFF70</selectedRDBMSSite>
+</relationalModel>

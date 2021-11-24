@@ -1,0 +1,78 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E73CDF0F-9C2A-AD72-6CDC-8AC4287362A2" name="User">
+<createdBy>teval</createdBy>
+<createdTime>2021-11-17 17:00:47 UTC</createdTime>
+<ownerDesignName>db</ownerDesignName>
+<ordsAlias>table_1</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="9F5E8342-14E0-2F9C-A2E3-A0DF7ECC5AC0">
+<createdBy>teval</createdBy>
+<createdTime>2021-11-17 17:01:49 UTC</createdTime>
+<ownerDesignName>db</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="user" id="2558D747-55E4-6975-6EAD-739F4DE84299">
+<createdBy>teval</createdBy>
+<createdTime>2021-11-17 17:01:49 UTC</createdTime>
+<ownerDesignName>db</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="password" id="D9527E7A-30A6-0438-624A-65195B9C95CF">
+<createdBy>teval</createdBy>
+<createdTime>2021-11-17 17:04:11 UTC</createdTime>
+<ownerDesignName>db</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="type" id="822FE0EF-D7FF-5091-89C4-59B45CAB4C1A">
+<createdBy>teval</createdBy>
+<createdTime>2021-11-17 17:08:55 UTC</createdTime>
+<ownerDesignName>db</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1 CHAR</dataTypeSize>
+<ownDataTypeParameters>1 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B9EE72B7-87AD-86A8-A85E-74269708DCBD" name="User_PK">
+<createdBy>teval</createdBy>
+<createdTime>2021-11-17 17:01:49 UTC</createdTime>
+<ownerDesignName>db</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9F5E8342-14E0-2F9C-A2E3-A0DF7ECC5AC0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E76926C8-614D-1ECA-B561-08AF0BAF9F77" name="User__UN">
+<createdBy>teval</createdBy>
+<createdTime>2021-11-17 17:02:04 UTC</createdTime>
+<ownerDesignName>db</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2558D747-55E4-6975-6EAD-739F4DE84299"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

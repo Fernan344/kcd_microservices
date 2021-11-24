@@ -1,0 +1,94 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="94BFDD94-3EFC-D62A-3C5B-4C8EAFDEF1FC" name="Message">
+<createdBy>teval</createdBy>
+<createdTime>2021-11-17 17:05:01 UTC</createdTime>
+<ownerDesignName>db</ownerDesignName>
+<ordsAlias>table_2</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="message" id="0B3F2869-5AC6-A518-E6BE-C485778BCF3D">
+<createdBy>teval</createdBy>
+<createdTime>2021-11-17 17:06:10 UTC</createdTime>
+<ownerDesignName>db</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1500 CHAR</dataTypeSize>
+<ownDataTypeParameters>1500 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id" id="E1FC49BD-7A11-C359-608C-3E6A094FA912">
+<createdBy>teval</createdBy>
+<createdTime>2021-11-17 17:06:10 UTC</createdTime>
+<ownerDesignName>db</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="User_transmitter" id="9FA40424-39A8-E92E-0DF7-50BAD0EF87E3">
+<createdBy>teval</createdBy>
+<createdTime>2021-11-17 17:06:26 UTC</createdTime>
+<ownerDesignName>db</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0F896E92-FA48-B1A3-7093-B8576183CE5E" referredColumn="9F5E8342-14E0-2F9C-A2E3-A0DF7ECC5AC0"/>
+</associations>
+</Column>
+<Column name="User_receiver" id="038CDEE4-436D-2C5C-A37C-A7C2C09705E3">
+<createdBy>teval</createdBy>
+<createdTime>2021-11-17 17:06:43 UTC</createdTime>
+<ownerDesignName>db</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="AE50EB6A-9456-AB0D-4AA0-86120C2CBFB2" referredColumn="9F5E8342-14E0-2F9C-A2E3-A0DF7ECC5AC0"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="AA71475C-2748-F612-0021-362E63633745" name="Message_PK">
+<createdBy>teval</createdBy>
+<createdTime>2021-11-17 17:06:10 UTC</createdTime>
+<ownerDesignName>db</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E1FC49BD-7A11-C359-608C-3E6A094FA912"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="51836BA7-778B-24E5-947F-7F4F8B5D37F8" name="Message_User_FK">
+<createdBy>teval</createdBy>
+<createdTime>2021-11-17 17:06:26 UTC</createdTime>
+<ownerDesignName>db</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9FA40424-39A8-E92E-0DF7-50BAD0EF87E3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F22CEFD5-6CEC-3137-F5CA-56746DADC8B9" name="Message_User_FKv2">
+<createdBy>teval</createdBy>
+<createdTime>2021-11-17 17:06:43 UTC</createdTime>
+<ownerDesignName>db</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="038CDEE4-436D-2C5C-A37C-A7C2C09705E3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

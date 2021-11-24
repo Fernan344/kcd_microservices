@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="db" id="8D82BF7D-8423-11B7-8C0D-8E6B517E211D" version="3.5">
+<createdBy>teval</createdBy>
+<createdTime>2021-11-17 17:00:14 UTC</createdTime>
+<ownerDesignName>db</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>8D82BF7D-8423-11B7-8C0D-8E6B517E211D</designId>
+</OSDM_Design>

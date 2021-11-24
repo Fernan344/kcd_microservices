@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="98A5F20F-08C7-5B35-7353-1934174A4007" mainViewID="3A5287E6-FBEE-72B0-92D5-1075E0665847">
+<createdBy>teval</createdBy>
+<createdTime>2021-11-17 17:00:14 UTC</createdTime>
+<ownerDesignName>db</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>

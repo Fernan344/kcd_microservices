@@ -1,0 +1,46 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Diagram class="oracle.dbtools.crest.swingui.relational.DPVRelational" name="Relational_1" id="54CF9A42-BE0E-DC19-4B4C-E44B3C0BF974">
+<createdBy>teval</createdBy>
+<modifiedBy>teval</modifiedBy>
+<createdTime>2021-11-17 17:00:47 UTC</createdTime>
+<autoRoute>false</autoRoute>
+<boxInbox>true</boxInbox>
+<showLegend>false</showLegend>
+<showLabels>false</showLabels>
+<showRelAttributes>false</showRelAttributes>
+<gridEnabled>false</gridEnabled>
+<showGrid>false</showGrid>
+<diagramColor>-1</diagramColor>
+<display>false</display>
+<notation>1</notation>
+<objectViews>
+<OView class="oracle.dbtools.crest.swingui.relational.TVTable" oid="94BFDD94-3EFC-D62A-3C5B-4C8EAFDEF1FC" otype="Table" vid="A52E0C92-5A91-9512-04B7-B4D11678C916">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<bounds x="486" y="58" width="277" height="151"/>
+</OView>
+<OView class="oracle.dbtools.crest.swingui.relational.TVTable" oid="E73CDF0F-9C2A-AD72-6CDC-8AC4287362A2" otype="Table" vid="CC892380-8CA6-D112-C23B-045DEAF29CA4">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<bounds x="45" y="61" width="264" height="131"/>
+</OView>
+</objectViews>
+<connectors>
+<Connector class="oracle.dbtools.crest.swingui.relational.TVFKRelation" oid="0F896E92-FA48-B1A3-7093-B8576183CE5E" otype="FKIndexAssociation" vid_source="CC892380-8CA6-D112-C23B-045DEAF29CA4" vid_target="A52E0C92-5A91-9512-04B7-B4D11678C916">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<backgroundColor>-16777216</backgroundColor>
+<lineWidth>1</lineWidth>
+<points>
+<point x="309" y="141"/>
+<point x="486" y="141"/>
+</points>
+</Connector>
+<Connector class="oracle.dbtools.crest.swingui.relational.TVFKRelation" oid="AE50EB6A-9456-AB0D-4AA0-86120C2CBFB2" otype="FKIndexAssociation" vid_source="CC892380-8CA6-D112-C23B-045DEAF29CA4" vid_target="A52E0C92-5A91-9512-04B7-B4D11678C916">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<backgroundColor>-16777216</backgroundColor>
+<lineWidth>1</lineWidth>
+<points>
+<point x="309" y="126"/>
+<point x="486" y="126"/>
+</points>
+</Connector>
+</connectors>
+</Diagram>

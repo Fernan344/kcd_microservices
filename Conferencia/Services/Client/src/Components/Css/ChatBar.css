@@ -1,0 +1,28 @@
+.chatBar {
+    flex: 0.35
+}
+
+.chatBar_header {
+    display: flex;    
+    padding: 20px;
+    border-right: 1px solid #0C0C0C;
+}
+
+.chatBar_header > h2 {
+    color: powderblue;
+}
+
+.chatBar_chats {
+    flex: 1;
+    height: 425px;
+    overflow-y: scroll;
+}
+
+.chatBar_chats::-webkit-scrollbar {
+    display: none;
+}
+
+.chatBar_chats {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
