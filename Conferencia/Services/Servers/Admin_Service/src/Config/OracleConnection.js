@@ -1,13 +1,13 @@
 const oracledb = require('oracledb')
 
 credentials = {
-    user: "Fernando",
-    password: "201731087",
-    connectString: "localhost/orcl18"
+    user: process.env.Oracle_User,
+    password: process.env.Oracle_Pass,
+    connectString: process.env.Oracle_Dsn
 }
 
 try {
-    oracledb.initOracleClient({libDir: '/opt/oracle/instantclient_21_3'})
+    oracledb.initOracleClient({libDir: '/opt/oracle/instantclient_19_3'})
     console.log("Oracle Connected!!!")
 }catch (err) {
     console.error('No Se Establecio La Conexion')

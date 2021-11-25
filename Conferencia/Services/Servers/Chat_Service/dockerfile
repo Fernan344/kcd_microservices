@@ -1,9 +1,25 @@
-FROM node:14
+FROM node:14-slim
+
+RUN apt-get update && apt-get install -y libaio1 wget
+RUN apt-get install -y unzip
+
+WORKDIR /opt/oracle
+
+RUN wget \
+    https://download.oracle.com/otn_software/linux/instantclient/193000/instantclient-basic-linux.x64-19.3.0.0.0dbru.zip && \
+    unzip instantclient-basic-linux.x64-19.3.0.0.0dbru.zip && \
+    rm -f instantclient-basic-linux.x64-19.3.0.0.0dbru.zip
+
+RUN cd /opt/oracle/instantclient_19_3 && rm -f *jdbc* *occi* *mysql* *README* *jar \
+    uidrvci genezi adrci
+
+RUN echo /opt/oracle/instantclient_19_3 > /etc/ld.so.conf.d/oracle-instantclient.conf && \
+    ldconfig
 
 RUN mkdir -p /usr/src/app
-
 WORKDIR /usr/src/app
-
+RUN mkdir -p /usr/src/app
+RUN cd 
 COPY package*.json ./
 
 RUN npm install
@@ -11,4 +27,4 @@ RUN npm install
 COPY . .
 
 EXPOSE 4000
-CMD ["npm", "forever"]
+CMD ["npm", "start"]

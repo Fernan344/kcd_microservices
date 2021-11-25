@@ -1,37 +1,37 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: admission
+  name: chat
 spec:
   replicas: 1
   selector:
     matchLabels:
-      role: admission
+      role: chat
   template:
     metadata:
       labels:
-        role: admission
+        role: chat
     spec: 
       containers:
-      - name: admission
-        image: thefernan/admission_service:latest
+      - name: chat
+        image: thefernan/chat_service:latest
         env:
-        - name: oracle_user
+        - name: Oracle_User
           value: "Fernando"
-        - name: oracle_pass
+        - name: Oracle_Pass
           value: "201731087"
-        - name: oracle_dsn
+        - name: Oracle_Dsn
           value: "34.125.193.240/orcl18"
 
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: admission
+  name: chat
 spec:
   type: LoadBalancer
   ports:
-  - port: 4500
-    targetPort: 4500
+  - port: 4000
+    targetPort: 4000
   selector:
-    role: admission
+    role: chat

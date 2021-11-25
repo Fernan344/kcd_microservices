@@ -1,7 +1,6 @@
 import cx_Oracle
 from flask import json
 from flask.json import jsonify
-import sys
 import os
 
 class Connection:             
@@ -10,7 +9,7 @@ class Connection:
         def __init__ (self):
                 cx_Oracle.init_oracle_client(lib_dir=r"/opt/oracle/instantclient_19_3")
                 self.connection = cx_Oracle.connect(os.environ['oracle_user'], os.environ['oracle_pass'], os.environ['oracle_dsn'])
-                print('Conexion Iniciada!!!')                
+                print('Conexion Iniciada!!!')      
 
         def login(self, user, password):
                 cursor = self.connection.cursor()

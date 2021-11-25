@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: client
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      role: client
+  template:
+    metadata:
+      labels:
+        role: client
+    spec: 
+      containers:
+      - name: client
+        image: thefernan/client_service:latest
+        env:
+        - name: REACT_APP_CHAT_HOST
+          value: 34.71.96.230
+        - name: REACT_APP_ADMISSION_HOST
+          value: 104.154.115.224
+        - name: REACT_APP_ADMIN_HOST
+          value: 34.123.11.53
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: client
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 3000
+    targetPort: 3000
+  selector:
+    role: client

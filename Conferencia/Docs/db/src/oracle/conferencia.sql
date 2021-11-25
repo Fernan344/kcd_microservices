@@ -149,7 +149,7 @@ SELECT * FROM usuario;
 SELECT * FROM mensaje;
 SELECT * FROM TABLE(get_messages(1, 10));
 SELECT * FROM TABLE(get_all_messages());
-EXECUTE INSERT_USER('newUsuario222', 'newPass', 'U');
+EXECUTE INSERT_USER('ADMINISTRADOR', 'administrador2017', 'A');
 EXECUTE INSERT_MESSAGE('newMEssage', 22, 23, TIMESTAMP '1997-01-31 09:26:50');
 SELECT * FROM TABLE(get_users());
 SELECT GET_USER('newUsuario222') FROM dual;

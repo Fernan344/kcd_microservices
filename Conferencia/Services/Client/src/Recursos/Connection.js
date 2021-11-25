@@ -1,11 +1,13 @@
+
 export function getConnectionChat(){    
-    return `http://localhost:4000`
+    return `http://${process.env.REACT_APP_CHAT_HOST}:4000`
 }
 
 export function getConnectionAdmission(){
-    return `http://localhost:4500`
+    console.log(process.env.REACT_APP_ADMISSION_HOST)
+    return `http://${process.env.REACT_APP_ADMISSION_HOST}:4500`
 }
 
 export function getConnectionAdmin(){
-    return `http://localhost:5000`
+    return `http://${process.env.REACT_APP_ADMIN_HOST}:5000`
 }

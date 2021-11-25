@@ -2,6 +2,7 @@ from flask import Flask, json, jsonify, request
 from flask_cors import CORS
 from src.services.oracle_connection import Connection
 
+
 app = Flask(__name__)
 CORS(app)
 connection = Connection()
@@ -30,4 +31,4 @@ def login():
         return jsonify({"auth": True, "tipo": response["tipo"], "id": response["id"]})       
 
 if __name__ == '__main__':
-    app.run(debug=True, port=4500)
+    app.run(debug=True, port=4500, host="0.0.0.0")
