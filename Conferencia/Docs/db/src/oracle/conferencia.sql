@@ -1,3 +1,5 @@
+/*Tablas*/
+
 CREATE TABLE usuario(
     identificador INTEGER NOT NULL PRIMARY KEY,
     usuario VARCHAR(100) NOT NULL UNIQUE,
@@ -30,7 +32,7 @@ START WITH 1
 NOMINVALUE
 NOMAXVALUE;
 
-/*Functions*/
+/*Procedures*/
 
 CREATE OR REPLACE PROCEDURE INSERT_USER(newUsuario VARCHAR, newPass VARCHAR, newTipo CHAR) IS
 BEGIN 
@@ -44,13 +46,7 @@ BEGIN
     COMMIT;
 END;
 
-CREATE OR REPLACE FUNCTION LOGIN(usuario_login VARCHAR, pass_login VARCHAR) RETURN VARCHAR IS
-    tipo_usuario CHAR;
-    id_usuario INTEGER;
-BEGIN
-    SELECT us.tipo, us.identificador INTO tipo_usuario, id_usuario FROM usuario us WHERE us.usuario = usuario_login AND us.pass = pass_login;
-    RETURN '{'||'"tipo": "'|| tipo_usuario || '", "id": ' || id_usuario || ' }';
-END;
+/*Objects*/
 
 CREATE OR REPLACE TYPE mensaje_row AS OBJECT (
     mensaje VARCHAR(1500),
@@ -59,7 +55,38 @@ CREATE OR REPLACE TYPE mensaje_row AS OBJECT (
     fecha TIMESTAMP
 );
 
+CREATE OR REPLACE TYPE user_row AS OBJECT (
+    identificador INTEGER,
+    usuario VARCHAR(100)
+);
+
+CREATE OR REPLACE TYPE all_messages_row AS OBJECT (
+    identificador INTEGER,
+    mensaje VARCHAR(1500),
+    idEmisor INTEGER,
+    emisor VARCHAR(100),
+    idReceptor INTEGER,
+    receptor VARCHAR(100),
+    fecha TIMESTAMP
+);
+
+/*Object Tables*/
+
 CREATE OR REPLACE TYPE mensajes_tabla AS TABLE OF mensaje_row;
+
+CREATE OR REPLACE TYPE users_tabla AS TABLE OF user_row;
+
+CREATE OR REPLACE TYPE all_messages_tabla AS TABLE OF all_messages_row;
+
+/*Functions*/
+
+CREATE OR REPLACE FUNCTION LOGIN(usuario_login VARCHAR, pass_login VARCHAR) RETURN VARCHAR IS
+    tipo_usuario CHAR;
+    id_usuario INTEGER;
+BEGIN
+    SELECT us.tipo, us.identificador INTO tipo_usuario, id_usuario FROM usuario us WHERE us.usuario = usuario_login AND us.pass = pass_login;
+    RETURN '{'||'"tipo": "'|| tipo_usuario || '", "id": ' || id_usuario || ' }';
+END;
 
 CREATE OR REPLACE FUNCTION GET_MESSAGES(idUsuario VARCHAR, idChat VARCHAR) RETURN mensajes_tabla AS
 
@@ -77,13 +104,6 @@ BEGIN
     END LOOP;
     RETURN v_ret;
 END;
-
-CREATE OR REPLACE TYPE user_row AS OBJECT (
-    identificador INTEGER,
-    usuario VARCHAR(100)
-);
-
-CREATE OR REPLACE TYPE users_tabla AS TABLE OF user_row;
 
 CREATE OR REPLACE FUNCTION GET_USERS RETURN users_tabla AS
 
@@ -106,20 +126,6 @@ BEGIN
     SELECT u.identificador INTO identificador_ FROM usuario u WHERE u.usuario=usuario_;
     RETURN identificador_;
 END;
-
-CREATE OR REPLACE TYPE all_messages_row AS OBJECT (
-    identificador INTEGER,
-    mensaje VARCHAR(1500),
-    idEmisor INTEGER,
-    emisor VARCHAR(100),
-    idReceptor INTEGER,
-    receptor VARCHAR(100),
-    fecha TIMESTAMP
-);
-
-
-
-CREATE OR REPLACE TYPE all_messages_tabla AS TABLE OF all_messages_row;
 
 CREATE OR REPLACE FUNCTION GET_ALL_MESSAGES RETURN all_messages_tabla AS
 

@@ -4,7 +4,6 @@ export function getConnectionChat(){
 }
 
 export function getConnectionAdmission(){
-    console.log(process.env.REACT_APP_ADMISSION_HOST)
     return `http://${process.env.REACT_APP_ADMISSION_HOST}:4500`
 }
 
