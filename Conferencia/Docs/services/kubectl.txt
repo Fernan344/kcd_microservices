@@ -1,0 +1,8 @@
+kubectl create namespace kcd
+
+kubectl apply -n kcd -f admission_service.yaml
+kubectl -n kcd logs admission
+
+kubectl -n kcd expose pod oracle --port=1521 --target-port=1521 --type=NodePort
+
+kubectl delete -n kcd -f admission_service.yaml

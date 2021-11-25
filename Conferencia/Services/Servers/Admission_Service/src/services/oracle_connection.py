@@ -1,13 +1,15 @@
 import cx_Oracle
 from flask import json
 from flask.json import jsonify
+import sys
+import os
 
 class Connection:             
-        
-        cx_Oracle.init_oracle_client(lib_dir=r"C:\\Oracle\\instantclient_21_3")
-        connection = cx_Oracle.connect('Fernando', '201731087', 'localhost/orcl18')
+        connection = None        
 
         def __init__ (self):
+                cx_Oracle.init_oracle_client(lib_dir=r"/opt/oracle/instantclient_19_3")
+                self.connection = cx_Oracle.connect(os.environ['oracle_user'], os.environ['oracle_pass'], os.environ['oracle_dsn'])
                 print('Conexion Iniciada!!!')                
 
         def login(self, user, password):

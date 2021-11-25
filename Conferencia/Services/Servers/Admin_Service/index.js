@@ -1,5 +1,4 @@
 const express = require('express')
-const WebSocketServer = require('socket.io')
 const http = require('http')
 const clientRouter = require('./src/Routes/Admin.Router')
 

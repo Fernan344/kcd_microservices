@@ -7,7 +7,7 @@ credentials = {
 }
 
 try {
-    oracledb.initOracleClient({libDir: 'C:\\Oracle\\instantclient_21_3'})
+    oracledb.initOracleClient({libDir: '/opt/oracle/instantclient_21_3'})
     console.log("Oracle Connected!!!")
 }catch (err) {
     console.error('No Se Establecio La Conexion')

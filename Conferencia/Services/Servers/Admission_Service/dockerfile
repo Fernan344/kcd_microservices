@@ -1,0 +1,27 @@
+FROM python:3.7.4-slim-buster
+RUN apt-get update && apt-get install -y libaio1 wget
+RUN apt-get install -y unzip
+
+WORKDIR /opt/oracle
+
+RUN wget \
+    https://download.oracle.com/otn_software/linux/instantclient/193000/instantclient-basic-linux.x64-19.3.0.0.0dbru.zip && \
+    unzip instantclient-basic-linux.x64-19.3.0.0.0dbru.zip && \
+    rm -f instantclient-basic-linux.x64-19.3.0.0.0dbru.zip
+
+RUN cd /opt/oracle/instantclient_19_3 && rm -f *jdbc* *occi* *mysql* *README* *jar \
+    uidrvci genezi adrci
+
+RUN echo /opt/oracle/instantclient_19_3 > /etc/ld.so.conf.d/oracle-instantclient.conf && \
+    ldconfig
+    
+WORKDIR /app
+
+COPY . ./
+
+RUN pip install Flask
+RUN pip install cx_Oracle
+RUN pip install flask_cors
+
+EXPOSE 4500
+CMD ["python", "app.py"]

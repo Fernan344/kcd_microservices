@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: admission
+spec:
+  containers:
+  - name: admission
+    image: thefernan/admission_service:latest
+    env:
+    - name: oracle_user
+      value: "Fernando"
+    - name: oracle_pass
+      value: "201731087"
+    - name: oracle_dsn
+      value: "34.125.193.240/orcl18"
