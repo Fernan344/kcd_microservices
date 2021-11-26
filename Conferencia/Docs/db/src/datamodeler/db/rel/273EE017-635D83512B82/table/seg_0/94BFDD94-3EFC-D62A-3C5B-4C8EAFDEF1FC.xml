@@ -57,6 +57,16 @@
 <colAssociation fkAssociation="AE50EB6A-9456-AB0D-4AA0-86120C2CBFB2" referredColumn="9F5E8342-14E0-2F9C-A2E3-A0DF7ECC5AC0"/>
 </associations>
 </Column>
+<Column name="fecha" id="4BCBD64F-C3FB-0B45-91CB-B17EE2F2419B">
+<createdBy>teval</createdBy>
+<createdTime>2021-11-26 00:03:50 UTC</createdTime>
+<ownerDesignName>db</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="AA71475C-2748-F612-0021-362E63633745" name="Message_PK">
