@@ -18,6 +18,7 @@ CREATE TABLE mensaje(
 );
 
 /*Secuenses*/
+
 DROP SEQUENCE id_user;
 CREATE SEQUENCE id_user
 INCREMENT BY 1

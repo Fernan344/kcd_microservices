@@ -1,0 +1,18 @@
+#instalacion
+sudo su
+apt-get update
+apt install docker.io
+docker pull dockerhelp/docker-oracle-ee-18c
+docker run -it -p 1521:1521 dockerhelp/docker-oracle-ee-18c
+sh post_install.sh
+    >sqlplus
+        #user: sys as sysdba
+        #pass: oracle
+    >alter session set "_ORACLE_SCRIPT"=true;
+    >create user <USER> identified by <PASSWORD>;
+    >grant dba to <USER>;
+
+#correrlo
+sudo su
+docker exec -it <ID_CONTAINER> /bin/bash
+sh post_install.sh

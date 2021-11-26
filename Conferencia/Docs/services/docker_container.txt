@@ -1,0 +1,3 @@
+docker build -t <image_name> .
+docker tag <image_name> <user_hub>/<image_name>
+docker push <user_hub>/<image_name>
